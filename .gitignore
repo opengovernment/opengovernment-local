@@ -1,0 +1,6 @@
+*.pyc
+*swp
+cache/
+data/
+src/
+billy_local.py
