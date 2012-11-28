@@ -2,15 +2,13 @@
 
 # @see http://billy.readthedocs.org/en/latest/metadata.html
 # @see https://raw.github.com/sunlightlabs/openstates/master/openstates/pa/__init__.py
+# @see https://raw.github.com/sunlightlabs/openstates/master/openstates/dc/__init__.py
 metadata = dict(
     name='Philadelphia',
-    # http://quickfacts.census.gov/qfd/states/42/4260000.html
-    abbreviation='4260000',
-    # https://gist.github.com/767070
+    abbreviation='pa-philadelphia',
     capitol_timezone='America/New_York',
     # http://en.wikipedia.org/wiki/Philadelphia_City_Council
     legislature_name='Philadelphia City Council',
-    # OpenStates chose "upper" for Washington, D.C.
     # http://philadelphiacitycouncil.net/about-city-council/
     chambers={
         'upper': {'name': 'Council', 'title': 'Councilmember'},
@@ -24,7 +22,7 @@ metadata = dict(
         '2012': {
             'type': 'primary',
             'display_name': '2012 Legislative Session',
-            '_scraped_name': '2012 Legislative Session',
+            '_scraped_name': '2012',
         },
     },
     # Transcripts go to 1997. Legislation and events go to 2000.
