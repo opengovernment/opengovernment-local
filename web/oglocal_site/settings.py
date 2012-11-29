@@ -102,10 +102,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'web.urls'
+ROOT_URLCONF = 'oglocal_site.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'web.wsgi.application'
+WSGI_APPLICATION = 'oglocal_site.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates')),
