@@ -4,8 +4,7 @@ import os
 
 MONGO_DATABASE = 'opengovernment_local'
 
-# @todo Set up a compatible boundary service instance.
-#BOUNDARY_SERVICE_URL  = ''
+BOUNDARY_SERVICE_URL  = 'http://127.0.0.1:8000/boundaryservice/'
 
 SCRAPER_PATHS = [os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scrapers')]
 
