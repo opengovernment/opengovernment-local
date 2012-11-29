@@ -13,6 +13,23 @@ mkvirtualenv oglocal --system-site-packages
 pip install -r requirements.txt
 ```
 
+## Boundary Service
+
+You do not need a boundary service to run the scrapers. If you have PostgreSQL and PostGIS:
+
+```sh
+createdb oglocal
+psql oglocal -f /path/to/postgis.sql
+psql oglocal -f /path/to/spatial_ref_sys.sql
+cp local_settings.py.example local_settings.py
+```
+
+Then, edit `local_settings.py` with your PostgreSQL credentials and run:
+
+```sh
+python site/manage.py syncdb
+```
+
 ## Running Scrapers
 
 ```sh
