@@ -12,7 +12,6 @@ def clean_string(string):
 
 # @note Can add personal_url, facebook_url, twitter_url, flickr_url, youtube_url
 # @note Party affiliation is not given on the official website.
-# @see https://raw.github.com/sunlightlabs/openstates/master/openstates/dc/legislators.py
 class PhiladelphiaLegislatorScraper(LegislatorScraper):
     jurisdiction = 'pa-philadelphia'
 
