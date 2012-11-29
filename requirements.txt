@@ -4,3 +4,5 @@
 Django>=1.4
 django-pjax
 lxml>=2.2
+
+-e git+https://github.com/jpmckinney/django-boundaryservice.git@develop#egg=django-boundaryservice

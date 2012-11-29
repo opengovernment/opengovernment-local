@@ -5,3 +5,4 @@
 /src
 /site/local_settings.py
 /site/oglocal_site/oglocal.sqlite3
+!/data/shapefiles
