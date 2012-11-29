@@ -13,6 +13,12 @@ mkvirtualenv oglocal --system-site-packages
 pip install -r requirements.txt
 ```
 
+## Running Scrapers
+
+```sh
+billy-update pa-philadelphia --fastmode
+```
+
 ## Writing a Scraper
 
 For now, see the [OpenStates documentation](http://openstates.org/contributing/).
