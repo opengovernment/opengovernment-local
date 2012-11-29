@@ -160,6 +160,8 @@ LOGGING = {
     }
 }
 
+ACTIVE_STATES = []
+
 try:
     from .local_settings import *
 except ImportError:
