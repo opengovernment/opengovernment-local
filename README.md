@@ -28,6 +28,7 @@ Then, edit `local_settings.py` with your PostgreSQL credentials and run:
 
 ```sh
 python site/manage.py syncdb
+python site/manage.py loadshapefiles
 ```
 
 ## Running Scrapers
