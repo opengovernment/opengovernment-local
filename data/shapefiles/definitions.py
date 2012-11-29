@@ -27,7 +27,7 @@ SHAPEFILES = {
         # Path to a shapefile, relative to /data/shapefiles
         'file': 'pa-philadelphia/PhiladelphiaCouncilDistricts_2000.shp',
         # Generic singular name for an boundary of from this set
-        'singular': 'Philadelphia Council District',
+        'singular': 'District',
         # Should the singular name come first when creating canonical identifiers for this set?
         'kind_first': False,
         # Function which each feature wall be passed to in order to extract its "external_id" property
