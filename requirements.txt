@@ -1,2 +1,6 @@
 -e git+https://github.com/sunlightlabs/billy.git#egg=billy
+
+# @see https://github.com/sunlightlabs/billy/blob/master/requirements.txt
+Django>=1.4
+django-pjax
 lxml>=2.2
