@@ -1,6 +1,7 @@
 *.pyc
 *swp
-cache/
-data/
-src/
-billy_local.py
+/cache
+/data/*
+/src
+/site/local_settings.py
+/site/oglocal_site/oglocal.sqlite3

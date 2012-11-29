@@ -1,4 +1,4 @@
--e git+https://github.com/sunlightlabs/billy.git#egg=billy
+-e git+https://github.com/jpmckinney/billy.git@develop#egg=billy
 
 # @see https://github.com/sunlightlabs/billy/blob/master/requirements.txt
 Django>=1.4
