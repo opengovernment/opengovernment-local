@@ -52,6 +52,16 @@ billy-update pa-philadelphia --fastmode
 
 For now, see the [OpenStates documentation](http://openstates.org/contributing/).
 
+## Running the Site
+
+```sh
+python site/manage.py runserver
+```
+
+* Browse the web version at http://127.0.0.1:8000/
+* Consult the scraper dashboard at http://127.0.0.1:8000/admin/
+* Use the API according to the [OpenStates documentation](http://openstates.org/api/)
+
 ## Bugs? Questions?
 
 This project's main repository is on GitHub: [http://github.com/opengovernment/opengovernment-local](http://github.com/opengovernment/opengovernment-local), where your contributions, forks, bug reports, feature requests, and feedback are greatly welcomed.
