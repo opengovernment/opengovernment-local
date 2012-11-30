@@ -13,7 +13,7 @@ def clean_string(string):
 # @note Can add personal_url, facebook_url, twitter_url, flickr_url, youtube_url
 # @note Party affiliation is not given on the official website.
 class PhiladelphiaLegislatorScraper(LegislatorScraper):
-    jurisdiction = 'pa-philadelphia'
+    abbreviation = 'pa-philadelphia'
 
     def scrape(self, term, chambers):
         council_url = 'http://philadelphiacitycouncil.net/council-members/'
@@ -21,7 +21,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
         doc.make_links_absolute(council_url)
 
         urls = set(doc.xpath('//a[contains(@href, "/council-members/council")]/@href'))
-        assert len(urls) <= 17, 'should have 17 unique councilmember URLs'
+        assert len(urls) <= 17, 'expected 17 unique councilmember URLs, found %d' % len(urls)
 
         for url in urls:
             doc = lxml.html.fromstring(self.urlopen(url))

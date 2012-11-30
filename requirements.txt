@@ -1,4 +1,4 @@
--e git+https://github.com/jpmckinney/billy.git@develop#egg=billy
+-e git+http://github.com/jpmckinney/billy.git@develop#egg=billy
 
 # @see https://github.com/sunlightlabs/billy/blob/master/requirements.txt
 Django>=1.4
@@ -7,3 +7,4 @@ lxml>=2.2
 South
 
 -e git+http://github.com/rhymeswithcycle/represent-boundaries.git#egg=represent-boundaries
+-e git+http://github.com/sunlightlabs/openstates.git#egg=openstates
