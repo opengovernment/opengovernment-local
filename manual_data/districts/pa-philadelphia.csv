@@ -1,12 +1,12 @@
 abbr,chamber,name,num_seats,boundary_id
-pa-philadelphia,upper,1st District,1,
-pa-philadelphia,upper,2nd District,1,
-pa-philadelphia,upper,3rd District,1,
-pa-philadelphia,upper,4th District,1,
-pa-philadelphia,upper,5th District,1,
-pa-philadelphia,upper,6th District,1,
-pa-philadelphia,upper,7th District,1,
-pa-philadelphia,upper,8th District,1,
-pa-philadelphia,upper,9th District,1,
-pa-philadelphia,upper,10th District,1,
-pa-philadelphia,upper,At-Large,7,
+pa-philadelphia,upper,1st District,1,philadelphia-council-districts/1st-district
+pa-philadelphia,upper,2nd District,1,philadelphia-council-districts/2nd-district
+pa-philadelphia,upper,3rd District,1,philadelphia-council-districts/3rd-district
+pa-philadelphia,upper,4th District,1,philadelphia-council-districts/4th-district
+pa-philadelphia,upper,5th District,1,philadelphia-council-districts/5th-district
+pa-philadelphia,upper,6th District,1,philadelphia-council-districts/6th-district
+pa-philadelphia,upper,7th District,1,philadelphia-council-districts/7th-district
+pa-philadelphia,upper,8th District,1,philadelphia-council-districts/8th-district
+pa-philadelphia,upper,9th District,1,philadelphia-council-districts/9th-district
+pa-philadelphia,upper,10th District,1,philadelphia-council-districts/10th-district
+pa-philadelphia,upper,At-Large,7,pennsylvania-places/4260000
