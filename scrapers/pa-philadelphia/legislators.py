@@ -71,7 +71,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
                 self.logger.warning('Skipped paragraphs:\n' + '\n'.join(lxml.html.tostring(html) for html in doc.xpath('//div[@class="post-entry"]/p[position()>1]')))
 
             parts = doc.xpath('//div[@class="post-entry"]/p[position()=1]//text()') or doc.xpath('//div[@class="post-entry"]//text()')
-            parts = [clean_string(part) for part in parts]
+            parts = map(clean_string, parts)
             for part in filter(None, parts):
                 if re.match(r'^City Hall', part):
                     lines.append('City Hall, Room %s' % re.search('Room (\d+)', part).group(1))
@@ -91,8 +91,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
                     optional['email'] = re.search('\S+@\S+', part).group()
                 elif re.match(r'^(?:, )?Philadelphia, PA(?: 19107(?:-3290)?)?$', part):
                     pass
-                else:
-                    # @todo second office is sometimes in the same paragraph.
+                else: # @todo second office is sometimes in the same paragraph.
                     self.logger.warning('Skipped: ' + part)
 
             # Some Councilmembers have no zip code or only a 5-digit zip code.
