@@ -13,7 +13,7 @@ metadata = dict(
     # the odd-numbered district councilmembers begin in 2011. The even-numbered
     # district councilmembers begin in 2009.
     terms=[
-        dict(name='2011-2012', start_year=2011, end_year=2012, sessions=['2011-2012']),
+        dict(name='2011-2012', start_year=2011, end_year=2012, sessions=['2012']),
     ],
     # The website organizes documents by year, so organize sessions by year.
     session_details={
@@ -48,16 +48,15 @@ metadata = dict(
 
 def session_list():
     import lxml.html
-    import scrapelib
+    from scrapelib import urlopen
+    from datetime import date
 
     url = 'http://www3.sanjoseca.gov/clerk/agenda.asp'
-    doc = lxml.html.fromstring(scrapelib.urlopen(url))
+    doc = lxml.html.fromstring(urlopen(url))
     doc.make_links_absolute(url)
 
     timespan = next(text for text in doc.xpath('//text()[contains(.,"Meeting")][contains(.,"Minutes")]/following::text()') if text.strip())
-    # Unlike Ruby, Python can't do ranges over strings. Lame.
-    # Range.new(*timespan.split('-')).to_a
-    start, stop = map(int, timespan.split('-'))
-    return map(str, range(start, stop + 1))
+    start = int(timespan.split('-', 1)[0])
+    return map(str, range(start, date.today().year))
 
 # @todo def extract_text(doc, data):
