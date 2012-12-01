@@ -11,4 +11,5 @@ boundaries.register('California Places',
     authority='United States Census Bureau',
     source_url='http://www.census.gov/cgi-bin/geo/shapefiles2012/main',
     data_url='http://www2.census.gov/geo/tiger/TIGER2012/PLACE/tl_2012_06_place.zip',
+    encoding='iso-8859-1',
 )
