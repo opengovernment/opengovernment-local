@@ -3,19 +3,49 @@
 import lxml.html
 import re
 
-from billy.scrape.legislators import LegislatorScraper, Legislator
+from billy.scrape.legislators import LegislatorScraper, Legislator, Person
 
 tel_regex = re.compile('(\d{3})\D*(\d{3})\D*(\d{4})')
 
 def clean_string(string):
     return string.replace(u'\u2019', "'").replace(u'\u00A0', ' ').strip()
 
-# @note Can add personal_url, facebook_url, twitter_url, flickr_url, youtube_url
+# #note Can add office_hours, facebook_url, twitter_url to mayor.
+# @note Can add personal_url, facebook_url, twitter_url, flickr_url, youtube_url to councilmembers.
 # @note Party affiliation is not given on the official website.
 class PhiladelphiaLegislatorScraper(LegislatorScraper):
     abbreviation = 'pa-philadelphia'
 
     def scrape(self, term, chambers):
+        # The mayor doesn't sit on council.
+        url = 'http://www.phila.gov/'
+        doc = lxml.html.fromstring(self.urlopen(url))
+        doc.make_links_absolute(url)
+
+        # The mayor's name doesn't appear on the mayor's page!
+        name  = re.search('Mayor (.+)', doc.xpath('//title/text()')[0].strip()).group(1)
+        mayor = Person(name)
+        mayor.add_source(url)
+
+        url = 'http://www.phila.gov/mayor/'
+        doc = lxml.html.fromstring(self.urlopen(url))
+        doc.make_links_absolute(url)
+
+        lines   = map(clean_string, doc.xpath('//div[contains(text(),"Mailing Address")]/following-sibling::text()')[1:])
+        address = '\n'.join(lines)
+        phone   = '-'.join(tel_regex.search(doc.xpath('//strong[contains(text(),"Phone")]/following-sibling::text()[1]')[0]).groups())
+        fax     = '-'.join(tel_regex.search(doc.xpath('//strong[contains(text(),"Fax")]/following-sibling::text()[1]')[0]).groups())
+        email   = clean_string(doc.xpath('//strong[contains(text(),"Email")]/following-sibling::text()[1]')[0])
+
+        mayor.update(dict(url=url, email=email))
+        mayor.add_office('capitol', 'Office of the Mayor', address=address, phone=phone, fax=fax)
+        mayor.add_role('Mayor', term)
+        mayor.add_source(url)
+
+        self.save_object(mayor)
+
+
+
         council_url = 'http://philadelphiacitycouncil.net/council-members/'
         doc = lxml.html.fromstring(self.urlopen(council_url))
         doc.make_links_absolute(council_url)
