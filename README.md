@@ -10,8 +10,15 @@ To get started, you may re-use [Open 13](https://github.com/opennorth/open13)'s 
 git clone https://github.com/YOURUSERNAME/opengovernment-local.git
 cd opengovernment-local
 mkvirtualenv oglocal --system-site-packages
-pip install -r requirements.txt
 ```
+
+If you are not using the boundary service described below, you should comment out this line in `requirements.txt`:
+
+```
+-e git+http://github.com/rhymeswithcycle/represent-boundaries.git#egg=represent-boundaries
+```
+
+Then, run `pip install -r requirements.txt` and you should be ready to go!
 
 ## Boundary Service
 
