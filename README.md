@@ -18,7 +18,7 @@ If you are not using the boundary service described below, comment out the follo
 -e git+http://github.com/rhymeswithcycle/represent-boundaries.git#egg=represent-boundaries
 ```
 
-Then, run `pip install -r requirements.txt` and you should be ready to go!
+Run `pip install -r requirements.txt` and you should be ready to go!
 
 ## Boundary Service
 
