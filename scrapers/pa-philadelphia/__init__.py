@@ -15,10 +15,15 @@ metadata = dict(
     },
     # A councilmember's term is four years.
     terms=[
-        dict(name='2012-2016', start_year=2012, end_year=2016, sessions=['2012']),
+        dict(name='2012-2016', start_year=2012, end_year=2016, sessions=['2013', '2012']),
     ],
     # A new session begins January 2 of each year, according to media sources.
     session_details={
+        '2013': {
+            'type': 'primary',
+            'display_name': '2013 Legislative Session',
+            '_scraped_name': '2013',
+        },
         '2012': {
             'type': 'primary',
             'display_name': '2012 Legislative Session',
