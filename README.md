@@ -46,6 +46,7 @@ python site/manage.py loadshapefiles
 
 ```sh
 billy-update pa-philadelphia --fastmode
+billy-update ca-san-jose --fastmode
 ```
 
 ## Writing a Scraper
