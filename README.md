@@ -4,7 +4,7 @@ This is a temporary repository of scrapers written using [Billy](http://billy.re
 
 ## Getting Started
 
-To get started, you may re-use [Open13](https://github.com/opennorth/open13)'s excellent instructions, replacing `open13` where appropriate. Briefly, if you already have Git, Python 2.7 and virtualenvwrapper 1.7 or greater, then [fork this repository](https://github.com/opengovernment/opengovernment-local) and run:
+To get started, you may re-use [Open 13](https://github.com/opennorth/open13)'s excellent instructions, replacing `open13` where appropriate. Briefly, if you already have Git, MongoDB, Python 2.7 and virtualenvwrapper 1.7 or greater, then [fork this repository](https://github.com/opengovernment/opengovernment-local) and run:
 
 ```sh
 git clone https://github.com/YOURUSERNAME/opengovernment-local.git
