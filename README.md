@@ -12,7 +12,7 @@ cd opengovernment-local
 mkvirtualenv oglocal --system-site-packages
 ```
 
-If you are not using the boundary service described below, you should comment out this line in `requirements.txt`:
+If you are not using the boundary service described below, comment out the following line in `requirements.txt`:
 
 ```
 -e git+http://github.com/rhymeswithcycle/represent-boundaries.git#egg=represent-boundaries
