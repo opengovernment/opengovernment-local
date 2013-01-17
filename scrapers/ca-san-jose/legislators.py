@@ -13,7 +13,7 @@ def clean_string(string):
 # @note Can add end_date to role
 # @note Party affiliation is not given on the official website.
 class SanJoseLegislatorScraper(LegislatorScraper):
-    abbreviation = 'ca-san-jose'
+    jurisdiction = 'ca-san-jose'
 
     def scrape(self, term, chambers):
         # The links on http://www.sanjoseca.gov/index.aspx?NID=1187 may go off-
@@ -49,7 +49,7 @@ class SanJoseLegislatorScraper(LegislatorScraper):
             text      = td.xpath('.//strong/text()')[0]
 
             if 'District' in text:
-                district = re.search('District (\d+)', text).group(1)
+                district = re.search('District \d+', text).group(0)
                 name     = re.sub(', District \d+$', '', text)
                 role     = None
                 if 'Vice Mayor' in text:

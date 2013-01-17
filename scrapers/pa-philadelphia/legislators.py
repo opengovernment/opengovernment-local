@@ -14,7 +14,7 @@ def clean_string(string):
 # @note Can add personal_url, facebook_url, twitter_url, flickr_url, youtube_url to councilmembers.
 # @note Party affiliation is not given on the official website.
 class PhiladelphiaLegislatorScraper(LegislatorScraper):
-    abbreviation = 'pa-philadelphia'
+    jurisdiction = 'pa-philadelphia'
 
     def scrape(self, term, chambers):
         # The mayor doesn't sit on council.
