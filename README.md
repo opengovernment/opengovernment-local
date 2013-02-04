@@ -49,6 +49,8 @@ python site/manage.py syncdb
 python site/manage.py loadshapefiles
 ```
 
+The repository for OpenStates' shapefiles is [sunlightlabs/pentagon](https://github.com/sunlightlabs/pentagon).
+
 ## Running Scrapers
 
 ```sh
