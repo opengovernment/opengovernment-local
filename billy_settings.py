@@ -13,4 +13,4 @@ SCRAPER_PATHS = [
 ]
 
 # @see http://en.wikipedia.org/wiki/Local_government_in_the_United_States
-LEVEL_FIELD = 'jurisdiction'
+LEVEL_FIELD = 'state'
