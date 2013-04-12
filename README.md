@@ -22,7 +22,11 @@ Run `pip install -r requirements.txt` and you should be ready to go!
 
 ## Boundary Service
 
-You do not need a boundary service to run the scrapers. GeoDjango is not compatible with PostGIS 2.0, so you must use PostGIS 1.5. PostGIS 1.5 is not compatible with PostgreSQL 9.2, so you must use PostgreSQL 9.0. On OS X, if you already have PostgreSQL 9.2 via [Homebrew](http://mxcl.github.com/homebrew/), run:
+You do not need a boundary service to run the scrapers. GeoDjango is not compatible with PostGIS 2.0, so you must use PostGIS 1.5. PostGIS 1.5 is not compatible with PostgreSQL 9.2, so you must use PostgreSQL 9.0.
+
+### OS X
+
+If you already have PostgreSQL 9.2 via [Homebrew](http://mxcl.github.com/homebrew/), run:
 
 ```sh
 brew tap homebrew/versions
@@ -32,6 +36,8 @@ initdb /usr/local/var/postgres9
 cp /usr/local/Cellar/postgresql9/9.0.8/org.postgresql.postgres.plist ~/Library/LaunchAgents/
 launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
 ```
+
+### All operating systems
 
 Then you can run:
 
