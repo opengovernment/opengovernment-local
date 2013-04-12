@@ -2,8 +2,10 @@
 
 # @see https://github.com/sunlightlabs/billy/blob/master/requirements.txt
 Django>=1.4
+django-appconf
 django-pjax
 lxml>=2.2
+psycopg2
 South
 
 -e git+http://github.com/rhymeswithcycle/represent-boundaries.git#egg=represent-boundaries
