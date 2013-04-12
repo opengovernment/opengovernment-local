@@ -20,6 +20,8 @@ If you are not using the boundary service described below, comment out the follo
 
 Run `pip install -r requirements.txt` and you should be ready to go!
 
+*Note:* If you encounter the error `Error: pg_config executable not found.`, the quick solution is to create a symlink to `pg_config`.
+
 ## Boundary Service
 
 You do not need a boundary service to run the scrapers. GeoDjango is not compatible with PostGIS 2.0, so you must use PostGIS 1.5. PostGIS 1.5 is not compatible with PostgreSQL 9.2, so you must use PostgreSQL 9.0.
@@ -35,6 +37,14 @@ brew install postgis15
 initdb /usr/local/var/postgres9
 cp /usr/local/Cellar/postgresql9/9.0.8/org.postgresql.postgres.plist ~/Library/LaunchAgents/
 launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
+```
+
+### Linux
+
+Install geospatial libraries:
+
+```sh
+sudo apt-get install binutils libproj-dev gdal-bin
 ```
 
 ### All operating systems
