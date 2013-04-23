@@ -9,7 +9,7 @@ To get started, you may re-use [Open 13](https://github.com/opennorth/open13)'s 
 ```sh
 git clone https://github.com/YOURUSERNAME/opengovernment-local.git
 cd opengovernment-local
-mkvirtualenv oglocal --system-site-packages
+mkvirtualenv oglocal
 ```
 
 If you are not using the boundary service described below, comment out the following line in `requirements.txt`:
