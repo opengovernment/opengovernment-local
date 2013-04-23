@@ -10,5 +10,5 @@ lxml>=2.2
 psycopg2
 South
 
--e git+http://github.com/rhymeswithcycle/represent-boundaries.git#egg=represent-boundaries
+-e git+http://github.com/rhymeswithcycle/represent-boundaries.git@v1.0.0#egg=represent-boundaries
 -e git+http://github.com/sunlightlabs/openstates.git#egg=openstates
