@@ -58,7 +58,7 @@ psql oglocal -f /path/to/spatial_ref_sys.sql
 cp site/local_settings.py.example site/local_settings.py
 ```
 
-Then, edit `local_settings.py` with your PostgreSQL credentials and run:
+Then, edit `site/local_settings.py` with your PostgreSQL credentials and run:
 
 ```sh
 python site/manage.py syncdb
