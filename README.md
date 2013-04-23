@@ -62,6 +62,7 @@ Then, edit `site/local_settings.py` with your PostgreSQL credentials and run:
 
 ```sh
 python site/manage.py syncdb
+python site/manage.py migrate
 python site/manage.py loadshapefiles
 ```
 
