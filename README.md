@@ -55,7 +55,7 @@ Then you can run:
 createdb -h localhost oglocal
 psql oglocal -f /path/to/postgis.sql
 psql oglocal -f /path/to/spatial_ref_sys.sql
-cp local_settings.py.example local_settings.py
+cp site/local_settings.py.example site/local_settings.py
 ```
 
 Then, edit `local_settings.py` with your PostgreSQL credentials and run:
