@@ -49,7 +49,7 @@ sudo apt-get install binutils libproj-dev gdal-bin
 
 ### All operating systems
 
-Then you can run:
+Then, from the `opengovernment-local` directory, you can run:
 
 ```sh
 createdb -h localhost oglocal
@@ -70,6 +70,8 @@ The repository for OpenStates' shapefiles is [sunlightlabs/pentagon](https://git
 
 ## Running Scrapers
 
+From the `opengovernment-local` directory:
+
 ```sh
 billy-update pa-philadelphia --fastmode
 billy-update ca-san-jose --fastmode
@@ -80,6 +82,8 @@ billy-update ca-san-jose --fastmode
 For now, see the [OpenStates documentation](http://openstates.org/contributing/).
 
 ## Running the Site
+
+From the `opengovernment-local` directory:
 
 ```sh
 python site/manage.py runserver
