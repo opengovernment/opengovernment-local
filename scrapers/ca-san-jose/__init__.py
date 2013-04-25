@@ -6,6 +6,7 @@ metadata = dict(
     capitol_timezone='America/Los_Angeles',
     # http://en.wikipedia.org/wiki/San_Jose_City_Council
     legislature_name=u'San José City Council',
+    legislature_url='http://www.sanjoseca.gov/',
     chambers={
         'upper': {'name': 'Council', 'title': 'Councilmember'},
     },

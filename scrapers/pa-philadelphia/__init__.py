@@ -9,6 +9,7 @@ metadata = dict(
     capitol_timezone='America/New_York',
     # http://en.wikipedia.org/wiki/Philadelphia_City_Council
     legislature_name='Philadelphia City Council',
+    legislature_url='http://philadelphiacitycouncil.net/',
     # http://philadelphiacitycouncil.net/about-city-council/
     chambers={
         'upper': {'name': 'Council', 'title': 'Councilmember'},
