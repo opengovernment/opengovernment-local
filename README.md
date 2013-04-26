@@ -9,7 +9,7 @@ To get started, you may re-use [Open 13](https://github.com/opennorth/open13)'s 
 ```sh
 git clone https://github.com/YOURUSERNAME/opengovernment-local.git
 cd opengovernment-local
-mkvirtualenv oglocal --system-site-packages
+mkvirtualenv oglocal
 ```
 
 If you are not using the boundary service described below, comment out the following line in `requirements.txt`:
@@ -49,25 +49,28 @@ sudo apt-get install binutils libproj-dev gdal-bin
 
 ### All operating systems
 
-Then you can run:
+Then, from the `opengovernment-local` directory, you can run:
 
 ```sh
 createdb -h localhost oglocal
 psql oglocal -f /path/to/postgis.sql
 psql oglocal -f /path/to/spatial_ref_sys.sql
-cp local_settings.py.example local_settings.py
+cp site/local_settings.py.example site/local_settings.py
 ```
 
-Then, edit `local_settings.py` with your PostgreSQL credentials and run:
+Then, edit `site/local_settings.py` with your PostgreSQL credentials and run:
 
 ```sh
 python site/manage.py syncdb
+python site/manage.py migrate
 python site/manage.py loadshapefiles
 ```
 
 The repository for OpenStates' shapefiles is [sunlightlabs/pentagon](https://github.com/sunlightlabs/pentagon).
 
 ## Running Scrapers
+
+From the `opengovernment-local` directory:
 
 ```sh
 billy-update pa-philadelphia --fastmode
@@ -79,6 +82,8 @@ billy-update ca-san-jose --fastmode
 For now, see the [OpenStates documentation](http://openstates.org/contributing/).
 
 ## Running the Site
+
+From the `opengovernment-local` directory:
 
 ```sh
 python site/manage.py runserver
