@@ -24,21 +24,6 @@ Run `pip install -r requirements.txt` and you should be ready to go!
 
 ## Boundary Service
 
-You do not need a boundary service to run the scrapers. GeoDjango is not compatible with PostGIS 2.0, so you must use PostGIS 1.5. PostGIS 1.5 is not compatible with PostgreSQL 9.2, so you must use PostgreSQL 9.0.
-
-### OS X
-
-If you already have PostgreSQL 9.2 via [Homebrew](http://mxcl.github.com/homebrew/), run:
-
-```sh
-brew tap homebrew/versions
-brew unlink postgis
-brew install postgis15
-initdb /usr/local/var/postgres9
-cp /usr/local/Cellar/postgresql9/9.0.8/org.postgresql.postgres.plist ~/Library/LaunchAgents/
-launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
-```
-
 ### Linux
 
 Install geospatial libraries:
@@ -52,9 +37,6 @@ sudo apt-get install binutils libproj-dev gdal-bin
 Then, from the `opengovernment-local` directory, you can run:
 
 ```sh
-createdb -h localhost oglocal
-psql oglocal -f /path/to/postgis.sql
-psql oglocal -f /path/to/spatial_ref_sys.sql
 cp site/local_settings.py.example site/local_settings.py
 ```
 
