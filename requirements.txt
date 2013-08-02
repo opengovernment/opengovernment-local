@@ -1,7 +1,7 @@
 # @see https://bugs.launchpad.net/pytz/+bug/1204837
 pytz==2013b
 
--e git+http://github.com/sunlightlabs/billy.git#egg=billy
+-e git+http://github.com/sunlightlabs/billy.git@1.7.0#egg=billy
 scrapelib>=0.8.0
 
 # @see https://github.com/sunlightlabs/billy/blob/master/requirements.txt
