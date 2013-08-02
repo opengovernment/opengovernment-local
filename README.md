@@ -2,6 +2,7 @@
 
 This is a temporary repository of scrapers written using [Billy](http://billy.readthedocs.org/) to collect legislative information from local governments in the United States.
 
+_Note: Billy is officially depreciated. We do not currently recommend opengovernment-local to be used as a part of new projects._
 ## Getting Started
 
 Briefly, if you already have Git, MongoDB, Python 2.7 and virtualenvwrapper 1.7 or greater, then [fork this repository](https://github.com/opengovernment/opengovernment-local) and run:
