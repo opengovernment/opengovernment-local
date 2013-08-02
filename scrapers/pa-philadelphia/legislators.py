@@ -66,6 +66,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             fax       = None
             district  = 'At-Large' # default
             photo_url = (
+                doc.xpath('//img[contains(@title, "brian picture")]/@src') or  # Special case for BRIAN J. O’NEILL
                 doc.xpath('//img[contains(@class, "size-full")]/@src') or
                 doc.xpath('//img[contains(@class, "size-medium")]/@src') or
                 doc.xpath('//img[contains(@class, "size-thumbnail")]/@src')
@@ -103,9 +104,9 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             parts = doc.xpath('//div[@class="post-entry"]/p[position()=1]//text()') or doc.xpath('//div[@class="post-entry"]//text()')
             parts = map(clean_string, parts)
             for part in filter(None, parts):
-                if re.match(r'^City Hall', part):
+                if re.match(r'^City Hall.+Room', part):
                     lines.append('City Hall, Room %s' % re.search('Room (\d+)', part).group(1))
-                elif re.match(r'^FAX:', part, re.I):
+                elif re.match(r'^FAX:', part, re.I) or re.match(r'^F:', part, re.I):
                     fax = '-'.join(tel_regex.search(part).groups())
                 elif tel_regex.search(part):
                     if phone1:
