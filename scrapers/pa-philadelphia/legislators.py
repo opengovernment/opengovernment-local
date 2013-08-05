@@ -58,7 +58,10 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             doc.make_links_absolute(url)
 
             optional  = dict() # fields not all legislators will have
-            name      = []
+            full_name = []
+            first_name  = ''
+            middle_name = ''
+            last_name   = ''
             roles     = []
             lines     = []
             phone1    = None
@@ -84,14 +87,22 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
                     elif 'Council President' in part:
                         roles.append('Council President')
                     part = re.sub('^Council(?:man|woman| President)\s+', '', part)
-                    name.append(part)
+                    full_name.append(part)
+		    name_parts = full_name[0].split()
+		    if len(name_parts) == 2:
+			first_name = name_parts[0]
+			last_name  = name_parts[1]
+		    elif len(name_parts) == 3:
+			first_name  = name_parts[0]
+			middle_name = name_parts[1]
+			last_name   = name_parts[2]
                 elif part in ('Jr.', 'Sr.'):
-                    name.append(part)
+                    full_name.append(part)
                 elif 'District' in part:
                     district = part
                 else:
                     roles.append(part)
-            name = ', '.join(name)
+            full_name = ', '.join(full_name)
 
             contact_url = doc.xpath('//a[text()="Contact"]/@href')[0]
             doc = lxml.html.fromstring(self.urlopen(contact_url))
@@ -130,7 +141,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             lines.append('Philadelphia, PA 19107-3290')
             address = '\n'.join(lines)
 
-            legislator = Legislator(term, 'upper', district, name, url=url, photo_url=photo_url, party=None)
+            legislator = Legislator(term, 'upper', district, full_name, first_name, last_name, middle_name, url=url, photo_url=photo_url, party=None)
             legislator.update(optional)
             legislator.add_office('capitol', 'Council Office', address=address, phone=phone1, secondary_phone=phone2, fax=fax)
             legislator.add_source(url)
