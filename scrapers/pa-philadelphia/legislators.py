@@ -62,6 +62,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             first_name  = ''
             middle_name = ''
             last_name   = ''
+            suffixes    = ''
             roles     = []
             lines     = []
             phone1    = None
@@ -98,6 +99,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
 			last_name   = name_parts[2]
                 elif part in ('Jr.', 'Sr.'):
                     full_name.append(part)
+		    suffixes = part
                 elif 'District' in part:
                     district = part
                 else:
@@ -141,7 +143,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             lines.append('Philadelphia, PA 19107-3290')
             address = '\n'.join(lines)
 
-            legislator = Legislator(term, 'upper', district, full_name, first_name, last_name, middle_name, url=url, photo_url=photo_url, party=None)
+            legislator = Legislator(term, 'upper', district, full_name, first_name, last_name, middle_name, suffixes=suffixes, url=url, photo_url=photo_url, party=None)
             legislator.update(optional)
             legislator.add_office('capitol', 'Council Office', address=address, phone=phone1, secondary_phone=phone2, fax=fax)
             legislator.add_source(url)
