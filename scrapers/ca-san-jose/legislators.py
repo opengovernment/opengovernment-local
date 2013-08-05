@@ -44,7 +44,7 @@ class SanJoseLegislatorScraper(LegislatorScraper):
                     phone = '-'.join(match.groups())
                     break
 
-            url       = td.xpath('.//a[strong]/@href')[0]
+            url       = td.xpath('.//a[//strong]/@href')[0]
             photo_url = td.xpath('.//img/@src')[0]
             text      = td.xpath('.//strong/text()')[0]
 
