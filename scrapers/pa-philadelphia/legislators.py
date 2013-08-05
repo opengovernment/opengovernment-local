@@ -10,6 +10,22 @@ tel_regex = re.compile('(\d{3})\D*(\d{3})\D*(\d{4})')
 def clean_string(string):
     return string.replace(u'\u2019', "'").replace(u'\u00A0', ' ').strip()
 
+def parse_full_name(string):
+	first_name  = ''
+	middle_name = ''
+	last_name   = ''
+
+	name_parts = string.split()
+
+	if len(name_parts) == 2:
+		first_name = name_parts[0]
+		last_name  = name_parts[1]
+	elif len(name_parts) == 3:
+		first_name  = name_parts[0]
+		middle_name = name_parts[1]
+		last_name   = name_parts[2]
+	return first_name, middle_name, last_name
+
 # #note Can add office_hours, facebook_url, twitter_url to mayor.
 # @note Can add personal_url, facebook_url, twitter_url, flickr_url, youtube_url to councilmembers.
 # @note Party affiliation is not given on the official website.
@@ -23,8 +39,9 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
         doc.make_links_absolute(url)
 
         # The mayor's name doesn't appear on the mayor's page!
-        name  = re.search('Mayor (.+)', doc.xpath('//title/text()')[0].strip()).group(1)
-        mayor = Person(name)
+        full_name  = re.search('Mayor (.+)', doc.xpath('//title/text()')[0].strip()).group(1)
+        first_name, middle_name, last_name = parse_full_name(full_name)
+        mayor = Person(full_name, first_name, last_name, middle_name)
         mayor.add_source(url)
 
         url = 'http://www.phila.gov/mayor/'
@@ -89,14 +106,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
                         roles.append('Council President')
                     part = re.sub('^Council(?:man|woman| President)\s+', '', part)
                     full_name.append(part)
-		    name_parts = full_name[0].split()
-		    if len(name_parts) == 2:
-			first_name = name_parts[0]
-			last_name  = name_parts[1]
-		    elif len(name_parts) == 3:
-			first_name  = name_parts[0]
-			middle_name = name_parts[1]
-			last_name   = name_parts[2]
+		    first_name, middle_name, last_name = parse_full_name(full_name[0])
                 elif part in ('Jr.', 'Sr.'):
                     full_name.append(part)
 		    suffixes = part
