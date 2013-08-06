@@ -46,6 +46,8 @@ class SanJoseLegislatorScraper(LegislatorScraper):
 
             url       = td.xpath('.//a[//strong]/@href')[0]
             photo_url = td.xpath('.//img/@src')[0]
+
+	    # Extract district, name, role
             text      = td.xpath('.//strong/text()')[0]
 
             if 'District' in text:
@@ -62,8 +64,23 @@ class SanJoseLegislatorScraper(LegislatorScraper):
             else:
                 self.logger.warning('Skipped: ' + text)
 
+	    # Extract fax and secondary phone from councilmember's page
+            phone2    = None
+            fax       = None
+            councilmember_doc = lxml.html.fromstring(self.urlopen(url))
+            councilmember_doc.make_links_absolute(url)
+
+            # @todo xpath needs to be constrained further; it matches more elements than necessary
+            for text in councilmember_doc.xpath('//div[//img[@alt="Contact Us"]]//text()'):  # '//div[@id="quickLinks774"]//text()'):
+		if re.match('\s*Fax.*\d', text, re.I):
+                    fax = '-'.join(tel_regex.search(text).groups())
+		if re.match('\s*Phone.*\d', text, re.I) or re.match('\s*Ph..*\d', text, re.I) or re.match('\s*Tel..*\d', text, re.I):
+                    councilmember_phone = '-'.join(tel_regex.search(text).groups())
+                    phone2 = councilmember_phone if councilmember_phone != phone else None
+
+	    # Assign councilmember information
             legislator = Legislator(term, 'upper', district, name, email=emails[index], url=url, photo_url=photo_url, party=None)
-            legislator.add_office('capitol', 'Council Office', address=address, phone=phone)
+            legislator.add_office('capitol', 'Council Office', address=address, phone=phone, secondary_phone=phone2, fax=fax)
 
             if role:
                 legislator.add_role(role, term)

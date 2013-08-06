@@ -1,0 +1,454 @@
+{
+	"last_name" : "Rocha",
+	"sources" : [
+		{
+			"url" : "http://www.sanjoseca.gov/index.aspx?NID=155"
+		}
+	],
+	"full_name" : "Donald Rocha",
+	"first_name" : "Donald",
+	"middle_name" : "",
+	"district" : "District 9",
+	"email" : "District9@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/cmrocha.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 9",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://www.sanjoseca.gov/index.aspx?NID=155",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "408-292-6471",
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4909",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Herrera",
+	"sources" : [
+		{
+			"url" : "http://www.sanjoseca.gov/index.aspx?NID=156"
+		}
+	],
+	"full_name" : "Rose Herrera",
+	"first_name" : "Rose",
+	"middle_name" : "",
+	"district" : "District 8",
+	"email" : "rose.herrera@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/council_rHerrera.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 8",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://www.sanjoseca.gov/index.aspx?NID=156",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "408-292-6469",
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4908",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Nguyen",
+	"sources" : [
+		{
+			"url" : "http://www.sanjoseca.gov/index.aspx?nid=154"
+		}
+	],
+	"full_name" : "Madison Nguyen",
+	"first_name" : "Madison",
+	"middle_name" : "",
+	"district" : "District 7",
+	"email" : "District7@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/mnguyen.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 7",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		},
+		{
+			"term" : "2011-2012",
+			"type" : "Vice Mayor",
+			"start_date" : null,
+			"end_date" : null,
+			"state" : "ca-san-jose"
+		}
+	],
+	"url" : "http://www.sanjoseca.gov/index.aspx?nid=154",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "408-292-6468",
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4907",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Oliverio",
+	"sources" : [
+		{
+			"url" : "http://www.sjdistrict6.com"
+		}
+	],
+	"full_name" : "Pierluigi Oliverio",
+	"first_name" : "Pierluigi",
+	"middle_name" : "",
+	"district" : "District 6",
+	"email" : "pierluigi.oliverio@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/PLO-HeadShot.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 6",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://www.sjdistrict6.com",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : null,
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4906",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Constant",
+	"sources" : [
+		{
+			"url" : "http://www.sjdistrict1.com/"
+		}
+	],
+	"full_name" : "Pete Constant",
+	"first_name" : "Pete",
+	"middle_name" : "",
+	"district" : "District 1",
+	"email" : "District1@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N1187/Council_PConstant2010.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 1",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://www.sjdistrict1.com/",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : null,
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4901",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Campos",
+	"sources" : [
+		{
+			"url" : "http://www.sjdistrict5.com"
+		}
+	],
+	"full_name" : "Xavier Campos",
+	"first_name" : "Xavier",
+	"middle_name" : "",
+	"district" : "District 5",
+	"email" : "District5@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/xcampos.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 5",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://www.sjdistrict5.com",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : null,
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4905",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Khamis",
+	"sources" : [
+		{
+			"url" : "http://www.sanjoseca.gov/index.aspx?NID=3563"
+		}
+	],
+	"full_name" : "Johnny Khamis",
+	"first_name" : "Johnny",
+	"middle_name" : "",
+	"district" : "District 10",
+	"email" : "District10@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/Khamis-cropped.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 10",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://www.sanjoseca.gov/index.aspx?NID=3563",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : null,
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4910",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Liccardo",
+	"sources" : [
+		{
+			"url" : "http://www.sanjoseca.gov/index.aspx?NID=151"
+		}
+	],
+	"full_name" : "Sam Liccardo",
+	"first_name" : "Sam",
+	"middle_name" : "",
+	"district" : "District 3",
+	"email" : "District3@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N1187/Sam%20Liccardo%20Photo%5B1%5D.JPG",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 3",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://www.sanjoseca.gov/index.aspx?NID=151",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : null,
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4903",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Kalra",
+	"sources" : [
+		{
+			"url" : "http://sjdistrict2.com"
+		}
+	],
+	"full_name" : "Ash Kalra",
+	"first_name" : "Ash",
+	"middle_name" : "",
+	"district" : "District 2",
+	"email" : "District2@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N1187/Council_akalra.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 2",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://sjdistrict2.com",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : null,
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4902",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Chu",
+	"sources" : [
+		{
+			"url" : "http://www.sanjoseca.gov/index.aspx?NID=152"
+		}
+	],
+	"full_name" : "Kansen Chu",
+	"first_name" : "Kansen",
+	"middle_name" : "",
+	"district" : "District 4",
+	"email" : "District4@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/KansenPortrait3.jpg",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "District 4",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://www.sanjoseca.gov/index.aspx?NID=152",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "408-292-6459",
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4904",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Reed",
+	"sources" : [
+		{
+			"url" : "http://www.sanjoseca.gov/index.aspx?NID=147"
+		}
+	],
+	"full_name" : "Chuck Reed",
+	"first_name" : "Chuck",
+	"middle_name" : "",
+	"district" : "Mayor",
+	"email" : "mayoremail@sanjoseca.gov",
+	"photo_url" : "http://www.sanjoseca.gov/images/pages/N1187/MayorChuckReed.gif",
+	"roles" : [
+		{
+			"term" : "2011-2012",
+			"end_date" : null,
+			"district" : "Mayor",
+			"chamber" : "upper",
+			"state" : "ca-san-jose",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		},
+		{
+			"term" : "2011-2012",
+			"type" : "Mayor",
+			"start_date" : null,
+			"end_date" : null,
+			"state" : "ca-san-jose"
+		}
+	],
+	"url" : "http://www.sanjoseca.gov/index.aspx?NID=147",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : null,
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "408-535-4800",
+			"address" : "200 E. Santa Clara St.\nSan José, CA 95113",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
