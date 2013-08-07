@@ -1,206 +1,4 @@
 {
-	"last_name" : "Nutter",
-	"middle_name" : "A.",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"type" : "Mayor",
-			"start_date" : null,
-			"end_date" : null,
-			"state" : "pa-philadelphia"
-		}
-	],
-	"url" : "http://www.phila.gov/mayor/",
-	"first_name" : "Michael",
-	"sources" : [
-		{
-			"url" : "http://www.phila.gov/"
-		},
-		{
-			"url" : "http://www.phila.gov/mayor/"
-		}
-	],
-	"offices" : [
-		{
-			"fax" : "215-686-2180",
-			"name" : "Office of the Mayor",
-			"phone" : "215-686-2181",
-			"address" : "Room 215 City Hall\nPhiladelphia, PA 19107",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"full_name" : "Michael A. Nutter",
-	"email" : "michael.nutter@phila.gov",
-	"suffixes" : ""
-}
-{
-	"last_name" : "Goode",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-w-wilson-goode-jr/"
-		}
-	],
-	"full_name" : "W. Wilson Goode, Jr.",
-	"first_name" : "W.",
-	"middle_name" : "Wilson",
-	"district" : "At-Large",
-	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/GoodeLG1.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "At-Large",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-w-wilson-goode-jr/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1928",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3415",
-			"phone" : "215-686-3414",
-			"address" : "City Hall, Room 316\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : "Jr."
-}
-{
-	"last_name" : "Green",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-bill-green/"
-		}
-	],
-	"full_name" : "Bill Green",
-	"first_name" : "Bill",
-	"middle_name" : "",
-	"district" : "At-Large",
-	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/billGreenLG.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "At-Large",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-bill-green/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1930",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3421",
-			"phone" : "215-686-3420",
-			"address" : "City Hall, Room 312\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "Clarke",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-president-l-clarke-5th-district/"
-		}
-	],
-	"full_name" : "Darrell L. Clarke",
-	"first_name" : "Darrell",
-	"middle_name" : "L.",
-	"district" : "5th District",
-	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/ClarkeLG.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "5th District",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		},
-		{
-			"term" : "2012-2016",
-			"type" : "Council President",
-			"start_date" : null,
-			"end_date" : null,
-			"state" : "pa-philadelphia"
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-president-l-clarke-5th-district/",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1901",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3443",
-			"phone" : "215-686-3442",
-			"address" : "City Hall, Room 313\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "Quiñones-Sánchez",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilwoman-maria-d-quinones-sanchez-7th-district/"
-		}
-	],
-	"full_name" : "Maria D. Quiñones-Sánchez",
-	"first_name" : "Maria",
-	"middle_name" : "D.",
-	"district" : "7th District",
-	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/09/Black-Full-Body-214x300.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "7th District",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilwoman-maria-d-quinones-sanchez-7th-district/",
-	"+gender" : "Female",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1936",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3449",
-			"phone" : "215-686-3448",
-			"address" : "City Hall, Room 592\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
 	"last_name" : "Bass",
 	"sources" : [
 		{
@@ -234,300 +32,6 @@
 			"+secondary_phone" : "215-686-3425",
 			"phone" : "215-686-3424",
 			"address" : "City Hall, Room 594\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "Henon",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-bobby-henon-6th-district/"
-		}
-	],
-	"full_name" : "Bobby Henon",
-	"first_name" : "Bobby",
-	"middle_name" : "",
-	"district" : "6th District",
-	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/11/BobbyHenon.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "6th District",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-bobby-henon-6th-district/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1935",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3445",
-			"phone" : "215-686-3444",
-			"address" : "City Hall, Room 484\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "Squilla",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-mark-squilla-1st-district/"
-		}
-	],
-	"full_name" : "Mark Squilla",
-	"first_name" : "Mark",
-	"middle_name" : "",
-	"district" : "1st District",
-	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2012/05/squilla_large.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "1st District",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-mark-squilla-1st-district/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1931",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3459",
-			"phone" : "215-686-3458",
-			"address" : "City Hall, Room 332\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "Kenney",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-james-f-kenney/"
-		}
-	],
-	"full_name" : "James F. Kenney",
-	"first_name" : "James",
-	"middle_name" : "F.",
-	"district" : "At-Large",
-	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/JimKennyLG.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "At-Large",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-james-f-kenney/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-2013",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3451",
-			"phone" : "215-686-3450",
-			"address" : "City Hall, Room 330\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "O'Brien",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-dennis-m-obrien/"
-		}
-	],
-	"full_name" : "Dennis M. O'Brien",
-	"first_name" : "Dennis",
-	"middle_name" : "M.",
-	"district" : "At-Large",
-	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/09/OBrien_med.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "At-Large",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-dennis-m-obrien/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1929",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3441",
-			"phone" : "215-686-3440",
-			"address" : "City Hall, Room 582\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "O'Neill",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-brian-j-oneill-10th-district-minority-leader/"
-		}
-	],
-	"full_name" : "Brian J. O'Neill",
-	"first_name" : "Brian",
-	"middle_name" : "J.",
-	"district" : "10th District",
-	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/09/brian-picture-300x253.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "10th District",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		},
-		{
-			"term" : "2012-2016",
-			"type" : "Minority Leader",
-			"start_date" : null,
-			"end_date" : null,
-			"state" : "pa-philadelphia"
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-brian-j-oneill-10th-district-minority-leader/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : null,
-			"name" : "Council Office",
-			"+secondary_phone" : null,
-			"phone" : null,
-			"address" : "Philadelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "Greenlee",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-william-k-greenlee/"
-		}
-	],
-	"full_name" : "William K. Greenlee",
-	"first_name" : "William",
-	"middle_name" : "K.",
-	"district" : "At-Large",
-	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/williamGreenleeLG.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "At-Large",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		},
-		{
-			"term" : "2012-2016",
-			"type" : "Majority Deputy Whip",
-			"start_date" : null,
-			"end_date" : null,
-			"state" : "pa-philadelphia"
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-william-k-greenlee/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1927",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3447",
-			"phone" : "215-686-3446",
-			"address" : "City Hall, Room 508\nPhiladelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
-	"suffixes" : ""
-}
-{
-	"last_name" : "Johnson",
-	"sources" : [
-		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-kenyatta-johnson-2nd-district/"
-		}
-	],
-	"full_name" : "Kenyatta Johnson",
-	"first_name" : "Kenyatta",
-	"middle_name" : "",
-	"district" : "2nd District",
-	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/11/KenyattaJohnson.jpg",
-	"roles" : [
-		{
-			"term" : "2012-2016",
-			"end_date" : null,
-			"district" : "2nd District",
-			"chamber" : "upper",
-			"state" : "pa-philadelphia",
-			"party" : null,
-			"type" : "member",
-			"start_date" : null
-		}
-	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-kenyatta-johnson-2nd-district/",
-	"+gender" : "Male",
-	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : "215-686-1932",
-			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3413",
-			"phone" : "215-686-3412",
-			"address" : "City Hall, Room 580\nPhiladelphia, PA 19107-3290",
 			"type" : "capitol",
 			"email" : null
 		}
@@ -623,6 +127,259 @@
 	"suffixes" : ""
 }
 {
+	"last_name" : "Clarke",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-president-l-clarke-5th-district/"
+		}
+	],
+	"full_name" : "Darrell L. Clarke",
+	"first_name" : "Darrell",
+	"middle_name" : "L.",
+	"district" : "5th District",
+	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/ClarkeLG.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "5th District",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		},
+		{
+			"term" : "2012-2016",
+			"type" : "Council President",
+			"start_date" : null,
+			"end_date" : null,
+			"state" : "pa-philadelphia"
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-president-l-clarke-5th-district/",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1901",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3443",
+			"phone" : "215-686-3442",
+			"address" : "City Hall, Room 313\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Goode",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-w-wilson-goode-jr/"
+		}
+	],
+	"full_name" : "W. Wilson Goode, Jr.",
+	"first_name" : "W.",
+	"middle_name" : "Wilson",
+	"district" : "At-Large",
+	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/GoodeLG1.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "At-Large",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-w-wilson-goode-jr/",
+	"+gender" : "Male",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1928",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3415",
+			"phone" : "215-686-3414",
+			"address" : "City Hall, Room 316\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : "Jr."
+}
+{
+	"last_name" : "Green",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-bill-green/"
+		}
+	],
+	"full_name" : "Bill Green",
+	"first_name" : "Bill",
+	"middle_name" : "",
+	"district" : "At-Large",
+	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/billGreenLG.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "At-Large",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-bill-green/",
+	"+gender" : "Male",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1930",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3421",
+			"phone" : "215-686-3420",
+			"address" : "City Hall, Room 312\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Greenlee",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-william-k-greenlee/"
+		}
+	],
+	"full_name" : "William K. Greenlee",
+	"first_name" : "William",
+	"middle_name" : "K.",
+	"district" : "At-Large",
+	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/williamGreenleeLG.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "At-Large",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		},
+		{
+			"term" : "2012-2016",
+			"type" : "Majority Deputy Whip",
+			"start_date" : null,
+			"end_date" : null,
+			"state" : "pa-philadelphia"
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-william-k-greenlee/",
+	"+gender" : "Male",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1927",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3447",
+			"phone" : "215-686-3446",
+			"address" : "City Hall, Room 508\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Henon",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-bobby-henon-6th-district/"
+		}
+	],
+	"full_name" : "Bobby Henon",
+	"first_name" : "Bobby",
+	"middle_name" : "",
+	"district" : "6th District",
+	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/11/BobbyHenon.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "6th District",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-bobby-henon-6th-district/",
+	"+gender" : "Male",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1935",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3445",
+			"phone" : "215-686-3444",
+			"address" : "City Hall, Room 484\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Johnson",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-kenyatta-johnson-2nd-district/"
+		}
+	],
+	"full_name" : "Kenyatta Johnson",
+	"first_name" : "Kenyatta",
+	"middle_name" : "",
+	"district" : "2nd District",
+	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/11/KenyattaJohnson.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "2nd District",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-kenyatta-johnson-2nd-district/",
+	"+gender" : "Male",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1932",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3413",
+			"phone" : "215-686-3412",
+			"address" : "City Hall, Room 580\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
 	"last_name" : "Jones",
 	"sources" : [
 		{
@@ -671,22 +428,22 @@
 	"suffixes" : "Jr."
 }
 {
-	"last_name" : "Tasco",
+	"last_name" : "Kenney",
 	"sources" : [
 		{
-			"url" : "http://philadelphiacitycouncil.net/council-members/councilwoman-marian-b-tasco-9th-district-majority-leader/"
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-james-f-kenney/"
 		}
 	],
-	"full_name" : "Marian B. Tasco",
-	"first_name" : "Marian",
-	"middle_name" : "B.",
-	"district" : "9th District",
-	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/TascoLG.jpg",
+	"full_name" : "James F. Kenney",
+	"first_name" : "James",
+	"middle_name" : "F.",
+	"district" : "At-Large",
+	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/JimKennyLG.jpg",
 	"roles" : [
 		{
 			"term" : "2012-2016",
 			"end_date" : null,
-			"district" : "9th District",
+			"district" : "At-Large",
 			"chamber" : "upper",
 			"state" : "pa-philadelphia",
 			"party" : null,
@@ -694,16 +451,139 @@
 			"start_date" : null
 		}
 	],
-	"url" : "http://philadelphiacitycouncil.net/council-members/councilwoman-marian-b-tasco-9th-district-majority-leader/",
-	"+gender" : "Female",
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-james-f-kenney/",
+	"+gender" : "Male",
 	"chamber" : "upper",
 	"offices" : [
 		{
-			"fax" : "215-686-1938",
+			"fax" : "215-686-2013",
 			"name" : "Council Office",
-			"+secondary_phone" : "215-686-3455",
-			"phone" : "215-686-3454",
-			"address" : "City Hall, Room 577\nPhiladelphia, PA 19107-3290",
+			"+secondary_phone" : "215-686-3451",
+			"phone" : "215-686-3450",
+			"address" : "City Hall, Room 330\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Nutter",
+	"middle_name" : "A.",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"type" : "Mayor",
+			"start_date" : null,
+			"end_date" : null,
+			"state" : "pa-philadelphia"
+		}
+	],
+	"url" : "http://www.phila.gov/mayor/",
+	"first_name" : "Michael",
+	"sources" : [
+		{
+			"url" : "http://www.phila.gov/"
+		},
+		{
+			"url" : "http://www.phila.gov/mayor/"
+		}
+	],
+	"offices" : [
+		{
+			"fax" : "215-686-2180",
+			"name" : "Office of the Mayor",
+			"phone" : "215-686-2181",
+			"address" : "Room 215 City Hall\nPhiladelphia, PA 19107",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"full_name" : "Michael A. Nutter",
+	"email" : "michael.nutter@phila.gov",
+	"suffixes" : ""
+}
+{
+	"last_name" : "O'Brien",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-dennis-m-obrien/"
+		}
+	],
+	"full_name" : "Dennis M. O'Brien",
+	"first_name" : "Dennis",
+	"middle_name" : "M.",
+	"district" : "At-Large",
+	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/09/OBrien_med.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "At-Large",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-dennis-m-obrien/",
+	"+gender" : "Male",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1929",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3441",
+			"phone" : "215-686-3440",
+			"address" : "City Hall, Room 582\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "O'Neill",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-brian-j-oneill-10th-district-minority-leader/"
+		}
+	],
+	"full_name" : "Brian J. O'Neill",
+	"first_name" : "Brian",
+	"middle_name" : "J.",
+	"district" : "10th District",
+	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/09/brian-picture-300x253.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "10th District",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		},
+		{
+			"term" : "2012-2016",
+			"type" : "Minority Leader",
+			"start_date" : null,
+			"end_date" : null,
+			"state" : "pa-philadelphia"
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-brian-j-oneill-10th-district-minority-leader/",
+	"+gender" : "Male",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : null,
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : null,
+			"address" : "Philadelphia, PA 19107-3290",
 			"type" : "capitol",
 			"email" : null
 		}
@@ -751,6 +631,126 @@
 			"+secondary_phone" : "215-686-3453",
 			"phone" : "215-686-3452",
 			"address" : "City Hall, Room 319\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Quiñones-Sánchez",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilwoman-maria-d-quinones-sanchez-7th-district/"
+		}
+	],
+	"full_name" : "Maria D. Quiñones-Sánchez",
+	"first_name" : "Maria",
+	"middle_name" : "D.",
+	"district" : "7th District",
+	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/09/Black-Full-Body-214x300.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "7th District",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilwoman-maria-d-quinones-sanchez-7th-district/",
+	"+gender" : "Female",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1936",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3449",
+			"phone" : "215-686-3448",
+			"address" : "City Hall, Room 592\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Squilla",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilman-mark-squilla-1st-district/"
+		}
+	],
+	"full_name" : "Mark Squilla",
+	"first_name" : "Mark",
+	"middle_name" : "",
+	"district" : "1st District",
+	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2012/05/squilla_large.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "1st District",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-mark-squilla-1st-district/",
+	"+gender" : "Male",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1931",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3459",
+			"phone" : "215-686-3458",
+			"address" : "City Hall, Room 332\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		}
+	],
+	"suffixes" : ""
+}
+{
+	"last_name" : "Tasco",
+	"sources" : [
+		{
+			"url" : "http://philadelphiacitycouncil.net/council-members/councilwoman-marian-b-tasco-9th-district-majority-leader/"
+		}
+	],
+	"full_name" : "Marian B. Tasco",
+	"first_name" : "Marian",
+	"middle_name" : "B.",
+	"district" : "9th District",
+	"photo_url" : "http://66.147.244.101/~truedezi/citycouncil/wp-content/uploads/2011/09/TascoLG.jpg",
+	"roles" : [
+		{
+			"term" : "2012-2016",
+			"end_date" : null,
+			"district" : "9th District",
+			"chamber" : "upper",
+			"state" : "pa-philadelphia",
+			"party" : null,
+			"type" : "member",
+			"start_date" : null
+		}
+	],
+	"url" : "http://philadelphiacitycouncil.net/council-members/councilwoman-marian-b-tasco-9th-district-majority-leader/",
+	"+gender" : "Female",
+	"chamber" : "upper",
+	"offices" : [
+		{
+			"fax" : "215-686-1938",
+			"name" : "Council Office",
+			"+secondary_phone" : "215-686-3455",
+			"phone" : "215-686-3454",
+			"address" : "City Hall, Room 577\nPhiladelphia, PA 19107-3290",
 			"type" : "capitol",
 			"email" : null
 		}

@@ -8,8 +8,8 @@ dump_local() {
   local db_name="opengovernment_local"
   local tmpfile="/tmp/mongoquery-`date +%s`.js"
 
-  #echo "db.legislators.find( { \"state\" : \"$locality_name\" }, { _id: 0, full_name: 1, first_name: 1, middle_name: 1, last_name: 1, suffixes: 1, gender: 1, district: 1, chamber: 1, roles: 1, url: 1, photo_url: 1, offices: 1, email: 1, sources: 1 } ).pretty()" > $tmpfile
-  echo "db.legislators.find( { \"state\" : \"$locality_name\" }, { _id: 0, _type: 0, _all_ids: 0, created_at: 0, updated_at: 0, _scraped_name: 0, state: 0, leg_id: 0, party: 0, active: 0 } ).pretty()" > $tmpfile
+  #echo "db.legislators.find( { \"state\" : \"$locality_name\" }, { _id: 0, full_name: 1, first_name: 1, middle_name: 1, last_name: 1, suffixes: 1, gender: 1, district: 1, chamber: 1, roles: 1, url: 1, photo_url: 1, offices: 1, email: 1, sources: 1 } ).sort( { last_name: 1, first_name: 1 } ).pretty()" > $tmpfile
+  echo "db.legislators.find( { \"state\" : \"$locality_name\" }, { _id: 0, _type: 0, _all_ids: 0, created_at: 0, updated_at: 0, _scraped_name: 0, state: 0, leg_id: 0, party: 0, active: 0 } ).sort( { last_name: 1, first_name: 1 } ).pretty()" > $tmpfile
 
   cat $tmpfile | mongo --username $username --password $password localhost:27017/$db_name | egrep -v MongoDB.shell.version\|connecting.to\|bye | more
   rm $tmpfile
