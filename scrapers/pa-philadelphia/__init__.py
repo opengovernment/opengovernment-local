@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+from .legislators import PhiladelphiaLegislatorScraper
+
 # @see http://billy.readthedocs.org/en/latest/metadata.html
 # @see https://raw.github.com/sunlightlabs/openstates/master/openstates/pa/__init__.py
 # @see https://raw.github.com/sunlightlabs/openstates/master/openstates/dc/__init__.py

@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+from .legislators import SanJoseLegislatorScraper
+
 metadata = dict(
     name=u'San José',
     abbreviation='ca-san-jose',
