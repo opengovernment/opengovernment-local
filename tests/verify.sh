@@ -1,9 +1,14 @@
 #!/bin/bash
 
+
+# Usage:   ./verify.sh <locality-name> <mongo-username> <mongo-password>
+# Example: ./verify.sh ca-san-jose     mymongouser      mymongopswd
+
+
 dump_local() {
-  local username="$1"
-  local password="$2"
-  local locality_name="$3"
+  local locality_name="$1"
+  local username="$2"
+  local password="$3"
 
   local db_name="opengovernment_local"
   local tmpfile="/tmp/mongoquery-`date +%s`.js"
@@ -15,12 +20,12 @@ dump_local() {
   rm $tmpfile
 }
 
-username="$1"
-password="$2"
-locality_name="$3"
+locality_name="$1"
+username="$2"
+password="$3"
 
 # Dump the MongoDB documents for locality_name and compare against saved text
-dump_local $username $password $locality_name | diff - $locality_name.json
+dump_local $locality_name $username $password | diff - `dirname $0`/$locality_name.json
 rc="$?"
 
 if [ "$rc" = "0" ]; then
