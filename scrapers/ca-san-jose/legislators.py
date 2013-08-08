@@ -11,6 +11,9 @@ tel_regex = re.compile('(\d{3})\D*(\d{3})\D*(\d{4})')
 def clean_string(string):
     return string.replace(u'\u2019', "'").replace(u'\u00A0', ' ').strip()
 
+def year_is_within_term(year, term):
+    return bool(year >= term['start_year'] and year <= term['end_year'])
+
 # @note Can add end_date to role
 # @note Party affiliation is not given on the official website.
 class SanJoseLegislatorScraper(LegislatorScraper):
@@ -72,9 +75,6 @@ class SanJoseLegislatorScraper(LegislatorScraper):
                 self.logger.warning('Skipped: ' + text)
 
 	    # Extract councilmember's term
-            councilmember_term_expires_year = None
-            councilmember_term_begins_year  = None
-
             for text in td.xpath('.//text()'):
 		match = re.search('\s*Term Expires:\s*([\d]+)/([\d]+)/([\d]+)', text)
 		if match:
@@ -83,10 +83,7 @@ class SanJoseLegislatorScraper(LegislatorScraper):
 
 	    # Skip if this legislator is not in the current term being scraped
 	    scrape_for_term = self.find_term_named(scrape_for_term_named)
-            councilmember_term_begins_within  = bool(councilmember_term_begins_year  >= scrape_for_term['start_year'] and councilmember_term_begins_year  <= scrape_for_term['end_year'])
-            councilmember_term_expires_within = bool(councilmember_term_expires_year >= scrape_for_term['start_year'] and councilmember_term_expires_year <= scrape_for_term['end_year'])
-
-            if not councilmember_term_begins_within and not councilmember_term_expires_within:
+            if not year_is_within_term(councilmember_term_begins_year, scrape_for_term) and not year_is_within_term(councilmember_term_expires_year, scrape_for_term):
 		continue
 
 	    # Extract fax and secondary phone from councilmember's page
