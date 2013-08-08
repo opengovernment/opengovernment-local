@@ -2,6 +2,7 @@
 
 import lxml.html
 import re
+import string
 
 from billy.scrape.legislators import LegislatorScraper, Legislator
 
@@ -15,7 +16,13 @@ def clean_string(string):
 class SanJoseLegislatorScraper(LegislatorScraper):
     jurisdiction = 'ca-san-jose'
 
-    def scrape(self, term, chambers):
+    def find_term_named(self, term_name):
+	for t in self.metadata['terms']:
+	    if t['name'] == term_name:
+	        return t
+	return None
+
+    def scrape(self, scrape_for_term_named, chambers):
         # The links on http://www.sanjoseca.gov/index.aspx?NID=1187 may go off-
         # site, so use http://www.sanjoseca.gov/index.aspx?NID=146
         council_url = 'http://www.sanjoseca.gov/index.aspx?NID=146'
@@ -64,6 +71,24 @@ class SanJoseLegislatorScraper(LegislatorScraper):
             else:
                 self.logger.warning('Skipped: ' + text)
 
+	    # Extract councilmember's term
+            councilmember_term_expires_year = None
+            councilmember_term_begins_year  = None
+
+            for text in td.xpath('.//text()'):
+		match = re.search('\s*Term Expires:\s*([\d]+)/([\d]+)/([\d]+)', text)
+		if match:
+                    councilmember_term_expires_year = string.atoi('20' + match.group(3))  # Built-in Y2.1K bug
+                    councilmember_term_begins_year  = councilmember_term_expires_year - 3
+
+	    # Skip if this legislator is not in the current term being scraped
+	    scrape_for_term = self.find_term_named(scrape_for_term_named)
+            councilmember_term_begins_within  = bool(councilmember_term_begins_year  >= scrape_for_term['start_year'] and councilmember_term_begins_year  <= scrape_for_term['end_year'])
+            councilmember_term_expires_within = bool(councilmember_term_expires_year >= scrape_for_term['start_year'] and councilmember_term_expires_year <= scrape_for_term['end_year'])
+
+            if not councilmember_term_begins_within and not councilmember_term_expires_within:
+		continue
+
 	    # Extract fax and secondary phone from councilmember's page
             phone2    = None
             fax       = None
@@ -79,11 +104,11 @@ class SanJoseLegislatorScraper(LegislatorScraper):
                     phone2 = councilmember_phone if councilmember_phone != phone else None
 
 	    # Assign councilmember information
-            legislator = Legislator(term, 'upper', district, name, email=emails[index], url=url, photo_url=photo_url, party=None)
+            legislator = Legislator(scrape_for_term_named, 'upper', district, name, email=emails[index], url=url, photo_url=photo_url, party=None)
             legislator.add_office('capitol', 'Council Office', address=address, phone=phone, secondary_phone=phone2, fax=fax)
 
             if role:
-                legislator.add_role(role, term)
+                legislator.add_role(role, scrape_for_term_named)
 
             legislator.add_source(url)
 

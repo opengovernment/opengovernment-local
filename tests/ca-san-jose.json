@@ -6,6 +6,20 @@
 		}
 	],
 	"full_name" : "Xavier Campos",
+	"old_roles" : {
+		"2011-2012" : [
+			{
+				"term" : "2011-2012",
+				"end_date" : null,
+				"district" : "District 5",
+				"chamber" : "upper",
+				"state" : "ca-san-jose",
+				"party" : null,
+				"type" : "member",
+				"start_date" : null
+			}
+		]
+	},
 	"first_name" : "Xavier",
 	"middle_name" : "",
 	"district" : "District 5",
@@ -13,7 +27,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/xcampos.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 5",
 			"chamber" : "upper",
@@ -53,7 +67,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/KansenPortrait3.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 4",
 			"chamber" : "upper",
@@ -86,6 +100,20 @@
 		}
 	],
 	"full_name" : "Pete Constant",
+	"old_roles" : {
+		"2011-2012" : [
+			{
+				"term" : "2011-2012",
+				"end_date" : null,
+				"district" : "District 1",
+				"chamber" : "upper",
+				"state" : "ca-san-jose",
+				"party" : null,
+				"type" : "member",
+				"start_date" : null
+			}
+		]
+	},
 	"first_name" : "Pete",
 	"middle_name" : "",
 	"district" : "District 1",
@@ -93,7 +121,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N1187/Council_PConstant2010.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 1",
 			"chamber" : "upper",
@@ -133,7 +161,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/council_rHerrera.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 8",
 			"chamber" : "upper",
@@ -173,7 +201,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N1187/Council_akalra.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 2",
 			"chamber" : "upper",
@@ -213,7 +241,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/Khamis-cropped.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 10",
 			"chamber" : "upper",
@@ -246,6 +274,20 @@
 		}
 	],
 	"full_name" : "Sam Liccardo",
+	"old_roles" : {
+		"2011-2012" : [
+			{
+				"term" : "2011-2012",
+				"end_date" : null,
+				"district" : "District 3",
+				"chamber" : "upper",
+				"state" : "ca-san-jose",
+				"party" : null,
+				"type" : "member",
+				"start_date" : null
+			}
+		]
+	},
 	"first_name" : "Sam",
 	"middle_name" : "",
 	"district" : "District 3",
@@ -253,7 +295,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N1187/Sam%20Liccardo%20Photo%5B1%5D.JPG",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 3",
 			"chamber" : "upper",
@@ -286,6 +328,27 @@
 		}
 	],
 	"full_name" : "Madison Nguyen",
+	"old_roles" : {
+		"2011-2012" : [
+			{
+				"term" : "2011-2012",
+				"end_date" : null,
+				"district" : "District 7",
+				"chamber" : "upper",
+				"state" : "ca-san-jose",
+				"party" : null,
+				"type" : "member",
+				"start_date" : null
+			},
+			{
+				"term" : "2011-2012",
+				"type" : "Vice Mayor",
+				"start_date" : null,
+				"end_date" : null,
+				"state" : "ca-san-jose"
+			}
+		]
+	},
 	"first_name" : "Madison",
 	"middle_name" : "",
 	"district" : "District 7",
@@ -293,7 +356,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/mnguyen.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 7",
 			"chamber" : "upper",
@@ -303,7 +366,7 @@
 			"start_date" : null
 		},
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"type" : "Vice Mayor",
 			"start_date" : null,
 			"end_date" : null,
@@ -340,7 +403,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/PLO-HeadShot.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 6",
 			"chamber" : "upper",
@@ -373,6 +436,27 @@
 		}
 	],
 	"full_name" : "Chuck Reed",
+	"old_roles" : {
+		"2011-2012" : [
+			{
+				"term" : "2011-2012",
+				"end_date" : null,
+				"district" : "Mayor",
+				"chamber" : "upper",
+				"state" : "ca-san-jose",
+				"party" : null,
+				"type" : "member",
+				"start_date" : null
+			},
+			{
+				"term" : "2011-2012",
+				"type" : "Mayor",
+				"start_date" : null,
+				"end_date" : null,
+				"state" : "ca-san-jose"
+			}
+		]
+	},
 	"first_name" : "Chuck",
 	"middle_name" : "",
 	"district" : "Mayor",
@@ -380,7 +464,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N1187/MayorChuckReed.gif",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "Mayor",
 			"chamber" : "upper",
@@ -390,7 +474,7 @@
 			"start_date" : null
 		},
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"type" : "Mayor",
 			"start_date" : null,
 			"end_date" : null,
@@ -420,6 +504,20 @@
 		}
 	],
 	"full_name" : "Donald Rocha",
+	"old_roles" : {
+		"2011-2012" : [
+			{
+				"term" : "2011-2012",
+				"end_date" : null,
+				"district" : "District 9",
+				"chamber" : "upper",
+				"state" : "ca-san-jose",
+				"party" : null,
+				"type" : "member",
+				"start_date" : null
+			}
+		]
+	},
 	"first_name" : "Donald",
 	"middle_name" : "",
 	"district" : "District 9",
@@ -427,7 +525,7 @@
 	"photo_url" : "http://www.sanjoseca.gov/images/pages/N146/cmrocha.jpg",
 	"roles" : [
 		{
-			"term" : "2011-2012",
+			"term" : "2013-2014",
 			"end_date" : null,
 			"district" : "District 9",
 			"chamber" : "upper",
