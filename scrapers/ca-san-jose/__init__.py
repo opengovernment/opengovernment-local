@@ -43,6 +43,7 @@ metadata = dict(
         },
     },
     # Minutes go to 1995. Agendas go to 2001.
+    # (per http://www3.sanjoseca.gov/clerk/2011agenda.asp)
     _ignored_scraped_sessions=[
         '2011',
         '2010',
@@ -69,13 +70,44 @@ def session_list():
     import lxml.html
     from scrapelib import urlopen
     from datetime import date
+    import string
 
-    url = 'http://www3.sanjoseca.gov/clerk/agenda.asp'
-    doc = lxml.html.fromstring(urlopen(url))
-    doc.make_links_absolute(url)
+    # Start from City Clerk page
+    city_clerk_url = 'http://sanjoseca.gov/index.aspx?NID=145'
+    city_clerk_doc = lxml.html.fromstring(urlopen(city_clerk_url))
+    city_clerk_doc.make_links_absolute(city_clerk_url)
 
-    timespan = next(text for text in doc.xpath('//text()[contains(.,"Meeting")][contains(.,"Minutes")]/following::text()') if text.strip())
-    start = int(timespan.split('-', 1)[0])
-    return map(str, range(start, date.today().year))
+    # Find current year
+    current_year_url = city_clerk_doc.xpath('//td[//span]//a[contains(text(),"Council Agendas 2")]/@href')[0]
+    current_year_doc = lxml.html.fromstring(urlopen(current_year_url))
+    current_year_doc.make_links_absolute(current_year_url)
+
+    current_year_text = current_year_doc.xpath('//tr[contains(@class, "telerik-reTableHeaderRow")]//td[contains(text(),"COUNCIL AGENDAS")]/text()')[0]
+    current_year = string.split(current_year_text)[0]
+
+    # Find previous year
+    council_agendas_text = current_year_doc.xpath('//text()[contains(.,"Council Agendas/Synopses/Minutes")]')[0]
+    previous_year = string.split(council_agendas_text)[0]
+
+    # Find old archived years
+    archives_url = current_year_doc.xpath("//a[contains(text(),'Archived Agendas')][not(contains(text(),'%s'))]/@href" % previous_year)[0]
+    archives_doc = lxml.html.fromstring(urlopen(archives_url))
+    archives_doc.make_links_absolute(archives_url)
+
+    archived_council_agendas = map(string.strip, archives_doc.xpath('//table[./tr/td/div/strong[text()="Council Agendas/Synopses"]]//a/text()'))
+    while archived_council_agendas.count('') > 0:
+	archived_council_agendas.remove('')
+
+    archived_council_minutes = map(string.strip, archives_doc.xpath('//table[./tr/td/div/strong[text()="Council Meeting Minutes"]]//a/text()'))
+    while archived_council_minutes.count('') > 0:
+	archived_council_minutes.remove('')
+
+    aggregated_years = [current_year, previous_year] + archived_council_agendas + archived_council_minutes
+    unique_years     = list(set(aggregated_years))
+    int_years        = map(int, unique_years)
+    int_years.sort()
+    session_years    = map(str, int_years)
+
+    return session_years
 
 # @todo def extract_text(doc, data):
