@@ -423,6 +423,15 @@
 			"address" : "City Hall, Room 404\nPhiladelphia, PA 19107-3290",
 			"type" : "capitol",
 			"email" : null
+		},
+		{
+			"fax" : null,
+			"name" : "District Office",
+			"+secondary_phone" : "215-685-0295",
+			"phone" : "215-685-0293",
+			"address" : "5398 Wynnefield Avenue, Philadelphia PA",
+			"type" : "district",
+			"email" : null
 		}
 	],
 	"suffixes" : "Jr."
@@ -577,17 +586,7 @@
 	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-brian-j-oneill-10th-district-minority-leader/",
 	"+gender" : "Male",
 	"chamber" : "upper",
-	"offices" : [
-		{
-			"fax" : null,
-			"name" : "Council Office",
-			"+secondary_phone" : null,
-			"phone" : null,
-			"address" : "Philadelphia, PA 19107-3290",
-			"type" : "capitol",
-			"email" : null
-		}
-	],
+	"offices" : [ ],
 	"suffixes" : ""
 }
 {

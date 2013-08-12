@@ -2,6 +2,7 @@
 
 import lxml.html
 import re
+import string
 
 from billy.scrape.legislators import LegislatorScraper, Legislator, Person
 
@@ -9,6 +10,31 @@ tel_regex = re.compile('(\d{3})\D*(\d{3})\D*(\d{4})')
 
 def clean_string(string):
     return string.replace(u'\u2019', "'").replace(u'\u00A0', ' ').strip()
+
+def cleanup_address(s, assume_capitol_zipcode = True):
+
+    # Special case for Curtis Jones Jr.
+    if re.match(r'^, ', s):
+	s = string.replace(s, ', ', '', 1)
+
+    # Add missing zipcode and/or ZIP+4
+    if not assume_capitol_zipcode:
+	return s
+    elif re.match(r'.*Philadelphia.*PA', s) and not re.match(r'.*19107', s):
+	return string.replace(s, 'PA', 'PA 19107-3290')
+    elif re.match(r'.*19107-', s):
+	return s
+    else:
+	return string.replace(s, '19107', '19107-3290')
+
+def parse_phones(part, parts2):
+    phones = tel_regex.findall(part)
+    phone1 = '-'.join(phones[0])
+    if len(phones) == 2:
+	phone2 = '-'.join(phones[1])
+    else:
+	phone2 = phone1[:8] + re.search(r'(?: or |/)(\d{4})$', parts2).group(1)
+    return phone1, phone2
 
 def parse_full_name(string):
 	first_name  = ''
@@ -82,9 +108,14 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             suffixes    = ''
             roles     = []
             lines     = []
+            lines_office2 = []
+            has_office2 = bool(False)
             phone1    = None
+            phone1_office2 = None
             phone2    = None
+            phone2_office2 = None
             fax       = None
+            fax_office2 = None
             district  = 'At-Large' # default
             photo_url = (
                 doc.xpath('//img[contains(@title, "brian picture")]/@src') or  # Special case for BRIAN J. O’NEILL
@@ -128,34 +159,45 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             parts = map(clean_string, parts)
             for part in filter(None, parts):
                 if re.match(r'^City Hall.+Room', part):
-                    lines.append('City Hall, Room %s' % re.search('Room (\d+)', part).group(1))
-                elif re.match(r'^FAX:', part, re.I) or re.match(r'^F:', part, re.I):
-                    fax = '-'.join(tel_regex.search(part).groups())
-                elif tel_regex.search(part):
-                    if phone1:
-                        self.logger.warning('Already have phone numbers for one office: ' + part)
+                    lines.append(part)
+                elif re.match(r'.*Philadelphia.*PA', part):
+                    if has_office2:
+                    	lines_office2.append(cleanup_address(part, False))
                     else:
-                        phones = tel_regex.findall(part)
-                        phone1 = '-'.join(phones[0])
-                        if len(phones) == 2:
-                            phone2 = '-'.join(phones[1])
-                        else:
-                            phone2 = phone1[:8] + re.search(r'(?: or |/)(\d{4})$', parts[2]).group(1)
+			lines.append(cleanup_address(part))
+                elif re.match(r'^FAX:', part, re.I) or re.match(r'^F:', part, re.I):
+                    if has_office2:
+               		fax_office2 = '-'.join(tel_regex.search(part).groups())
+                    else:
+               		fax = '-'.join(tel_regex.search(part).groups())
+                elif tel_regex.search(part):
+                    if has_office2:
+			phone1_office2, phone2_office2 = parse_phones(part, parts[2])
+                    else:
+			phone1, phone2 = parse_phones(part, parts[2])
                 elif '@' in part:
                     optional['email'] = re.search('\S+@\S+', part).group()
                 elif re.match(r'^(?:, )?Philadelphia, PA(?: 19107(?:-3290)?)?$', part):
                     pass
-                else: # @todo second office is sometimes in the same paragraph.
+                elif re.match(r'Local Office', part):
+                    has_office2 = True
+                else:
                     self.logger.warning('Skipped: ' + part)
 
             # Some Councilmembers have no zip code or only a 5-digit zip code.
             # All that changes between them is a room number.
-            lines.append('Philadelphia, PA 19107-3290')
             address = '\n'.join(lines)
+            address_office2 = '\n'.join(lines_office2)
 
             legislator = Legislator(term, 'upper', district, full_name, first_name, last_name, middle_name, suffixes=suffixes, url=url, photo_url=photo_url, party=None)
             legislator.update(optional)
-            legislator.add_office('capitol', 'Council Office', address=address, phone=phone1, secondary_phone=phone2, fax=fax)
+
+	    if re.search('.*\S.*', address):
+      		legislator.add_office('capitol', 'Council Office', address=address, phone=phone1, secondary_phone=phone2, fax=fax)
+
+	    if re.search('.*\S.*', address_office2):
+      		legislator.add_office('district', 'District Office', address=address_office2, phone=phone1_office2, secondary_phone=phone2_office2, fax=fax_office2)
+
             legislator.add_source(url)
 
             for role in roles:
