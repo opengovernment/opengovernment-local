@@ -426,7 +426,7 @@
 		},
 		{
 			"fax" : null,
-			"name" : "District Office",
+			"name" : "Local Office",
 			"+secondary_phone" : "215-685-0295",
 			"phone" : "215-685-0293",
 			"address" : "5398 Wynnefield Avenue, Philadelphia PA",
@@ -563,6 +563,7 @@
 	"first_name" : "Brian",
 	"middle_name" : "J.",
 	"district" : "10th District",
+	"email" : "Brian.O'Neill@Phila.Gov",
 	"photo_url" : "http://philadelphiacitycouncil.net/wp-content/uploads/2011/09/brian-picture-300x253.jpg",
 	"roles" : [
 		{
@@ -586,7 +587,26 @@
 	"url" : "http://philadelphiacitycouncil.net/council-members/councilman-brian-j-oneill-10th-district-minority-leader/",
 	"+gender" : "Male",
 	"chamber" : "upper",
-	"offices" : [ ],
+	"offices" : [
+		{
+			"fax" : "215-686-1939",
+			"name" : "Council Office",
+			"+secondary_phone" : null,
+			"phone" : "215-686-3422",
+			"address" : "City Hall, Room 562\nPhiladelphia, PA 19107-3290",
+			"type" : "capitol",
+			"email" : null
+		},
+		{
+			"fax" : "215-685-0436",
+			"name" : "Northeast Office",
+			"+secondary_phone" : null,
+			"phone" : "215-685-0432",
+			"address" : "Bustleton & Bowler, 2nd FL.\nPhiladelphia, PA 19115",
+			"type" : "district",
+			"email" : null
+		}
+	],
 	"suffixes" : ""
 }
 {

@@ -27,13 +27,15 @@ def cleanup_address(s, assume_capitol_zipcode = True):
     else:
 	return string.replace(s, '19107', '19107-3290')
 
-def parse_phones(part, parts2):
+def parse_phones(part):
     phones = tel_regex.findall(part)
     phone1 = '-'.join(phones[0])
     if len(phones) == 2:
 	phone2 = '-'.join(phones[1])
+    elif re.match(r'.* or \d{4}', part) or re.match(r'.*/\d{4}', part):
+	phone2 = phone1[:8] + re.search(r'(?: or |/)(\d{4})$', part).group(1)
     else:
-	phone2 = phone1[:8] + re.search(r'(?: or |/)(\d{4})$', parts2).group(1)
+	phone2 = None
     return phone1, phone2
 
 def parse_full_name(string):
@@ -110,12 +112,14 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             lines     = []
             lines_office2 = []
             has_office2 = bool(False)
+            reached_contact_form = bool(False)
             phone1    = None
             phone1_office2 = None
             phone2    = None
             phone2_office2 = None
             fax       = None
             fax_office2 = None
+            office_name = None
             district  = 'At-Large' # default
             photo_url = (
                 doc.xpath('//img[contains(@title, "brian picture")]/@src') or  # Special case for BRIAN J. O’NEILL
@@ -151,36 +155,73 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             doc = lxml.html.fromstring(self.urlopen(contact_url))
             doc.make_links_absolute(contact_url)
 
-            # @todo email, second office, personal_url are sometimes in another paragraph.
-            if len(doc.xpath('//div[@class="post-entry"]/p')) > 1:
-                self.logger.warning('Skipped paragraphs:\n' + '\n'.join(lxml.html.tostring(html) for html in doc.xpath('//div[@class="post-entry"]/p[position()>1]')))
+            # @todo email, personal_url are sometimes in another paragraph.
 
-            parts = doc.xpath('//div[@class="post-entry"]/p[position()=1]//text()') or doc.xpath('//div[@class="post-entry"]//text()')
+            parts = doc.xpath('//div[@class="post-entry"]//text()')
             parts = map(clean_string, parts)
+	    consuming_address_lines = bool(False)
             for part in filter(None, parts):
-                if re.match(r'^City Hall.+Room', part):
+ 
+		# Special case for Curtis Jones Jr.
+                if re.match(r'^Local Office:', part):
+		    consuming_address_lines = True
+                    has_office2 = True
+		    office_name = 'Local Office'
+
+                if re.match(r'City Hall Office', part) or re.match(r'^Hours', part) or re.match(r'.*facebook', part) or re.match(r'.*twitter', part) or reached_contact_form:
+		    continue
+
+                elif re.match(r'^Contact Council.*man', part) or re.match(r'^Contact CMAL', part):
+		    reached_contact_form = True
+                    continue
+
+                elif re.match(r'^City Hall.+Room', part):
+		    consuming_address_lines = True
                     lines.append(part)
-                elif re.match(r'.*Philadelphia.*PA', part):
+
+                elif re.match(r'^FAX:', part, re.I) or re.match(r'^F:', part, re.I):
+		    consuming_address_lines = False
+                    if has_office2 and fax_office2 == None:
+               		fax_office2 = '-'.join(tel_regex.search(part).groups())
+                    elif fax == None:
+               		fax = '-'.join(tel_regex.search(part).groups())
+
+                elif tel_regex.search(part):
+		    consuming_address_lines = False
+                    if has_office2 and phone1_office2 == None and phone2_office2 == None:
+			phone1_office2, phone2_office2 = parse_phones(part)
+                    elif phone1 == None and phone2 == None:
+			phone1, phone2 = parse_phones(part)
+
+                elif '@' in part:
+		    consuming_address_lines = False
+                    optional['email'] = re.search('\S+@\S+', part).group()
+
+                elif re.match(r'^Neighborhood Office.*', part):
+		    consuming_address_lines = False
+                    has_office2 = True
+
+                elif re.match(r'.*Office.*', part) or re.match(r'.*Heroes Hall.*', part):
+
+		    # Special case for Curtis Jones Jr.
+		    if re.match(r'.*Local Office.*', part):
+			continue
+
+		    if len(lines_office2) > 0:
+			consuming_address_lines = False
+		    else:
+			consuming_address_lines = True
+			office_name =  string.strip(part, ':;,.')
+
+                elif consuming_address_lines:
                     if has_office2:
                     	lines_office2.append(cleanup_address(part, False))
                     else:
 			lines.append(cleanup_address(part))
-                elif re.match(r'^FAX:', part, re.I) or re.match(r'^F:', part, re.I):
-                    if has_office2:
-               		fax_office2 = '-'.join(tel_regex.search(part).groups())
-                    else:
-               		fax = '-'.join(tel_regex.search(part).groups())
-                elif tel_regex.search(part):
-                    if has_office2:
-			phone1_office2, phone2_office2 = parse_phones(part, parts[2])
-                    else:
-			phone1, phone2 = parse_phones(part, parts[2])
-                elif '@' in part:
-                    optional['email'] = re.search('\S+@\S+', part).group()
+
                 elif re.match(r'^(?:, )?Philadelphia, PA(?: 19107(?:-3290)?)?$', part):
                     pass
-                elif re.match(r'Local Office', part):
-                    has_office2 = True
+
                 else:
                     self.logger.warning('Skipped: ' + part)
 
@@ -196,7 +237,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
       		legislator.add_office('capitol', 'Council Office', address=address, phone=phone1, secondary_phone=phone2, fax=fax)
 
 	    if re.search('.*\S.*', address_office2):
-      		legislator.add_office('district', 'District Office', address=address_office2, phone=phone1_office2, secondary_phone=phone2_office2, fax=fax_office2)
+      		legislator.add_office('district', office_name, address=address_office2, phone=phone1_office2, secondary_phone=phone2_office2, fax=fax_office2)
 
             legislator.add_source(url)
 
