@@ -234,7 +234,7 @@ class PhiladelphiaLegislatorScraper(LegislatorScraper):
             legislator.update(optional)
 
 	    if re.search('.*\S.*', address):
-      		legislator.add_office('capitol', 'Council Office', address=address, phone=phone1, secondary_phone=phone2, fax=fax)
+      		legislator.add_office('capitol', 'City Hall Office', address=address, phone=phone1, secondary_phone=phone2, fax=fax)
 
 	    if re.search('.*\S.*', address_office2):
       		legislator.add_office('district', office_name, address=address_office2, phone=phone1_office2, secondary_phone=phone2_office2, fax=fax_office2)
