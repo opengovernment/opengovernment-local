@@ -57,7 +57,7 @@ From the `opengovernment-local` directory:
 
 ```sh
 billy-update pa-philadelphia --fastmode
-billy-update ca-san-jose --fastmode
+billy-update ca-san-jose --fastmode --term 2011-2012 --term 2013-2014
 ```
 
 ## Writing a Scraper
