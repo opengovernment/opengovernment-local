@@ -71,6 +71,10 @@ metadata = dict(
     feature_flags=[]
 )
 
+def strip_council_agendas_prefix(str):
+    import string
+    return string.replace(str, 'Council Agendas ', '')
+
 def session_list():
     import lxml.html
     from scrapelib import urlopen
@@ -90,12 +94,12 @@ def session_list():
     current_year_text = current_year_doc.xpath('//tr[contains(@class, "telerik-reTableHeaderRow")]//td[contains(text(),"COUNCIL AGENDAS")]/text()')[0]
     current_year = string.split(current_year_text)[0]
 
-    # Find previous year
-    council_agendas_text = current_year_doc.xpath('//text()[contains(.,"Council Agendas/Synopses/Minutes")]')[0]
-    previous_year = string.split(council_agendas_text)[0]
+    # Find agenda years
+    council_agendas = map(string.strip, current_year_doc.xpath('//a[contains(text(),"Council Agendas 2")]/text()'))
+    agenda_years = map(strip_council_agendas_prefix, council_agendas)
 
     # Find old archived years
-    archives_url = current_year_doc.xpath("//a[contains(text(),'Archived Agendas')][not(contains(text(),'%s'))]/@href" % previous_year)[0]
+    archives_url = current_year_doc.xpath("//a[contains(text(),'Archived Agendas')]/@href")[0]
     archives_doc = lxml.html.fromstring(urlopen(archives_url))
     archives_doc.make_links_absolute(archives_url)
 
@@ -107,7 +111,7 @@ def session_list():
     while archived_council_minutes.count('') > 0:
 	archived_council_minutes.remove('')
 
-    aggregated_years = [current_year, previous_year] + archived_council_agendas + archived_council_minutes
+    aggregated_years = [current_year] + agenda_years + archived_council_agendas + archived_council_minutes
     unique_years     = list(set(aggregated_years))
     int_years        = map(int, unique_years)
     int_years.sort()
