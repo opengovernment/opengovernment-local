@@ -20,11 +20,16 @@ metadata = dict(
     # All councilmembers serve the same term
     # @see http://www.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/philadelphiahomerulecharter/articleiilegislativebranchthecouncil-its/chapter1thecouncil?fn=altmain-nf.htm$f=templates$3.0
     terms=[
-        dict(name='2012-2016', start_year=2012, end_year=2016, sessions=['2013', '2012']),
+        dict(name='2012-2016', start_year=2012, end_year=2016, sessions=['2014', '2013', '2012']),
     ],
     # A new session begins the first Monday of January following the year in which they were elected
     # @see http://www.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/philadelphiahomerulecharter/articleiilegislativebranchthecouncil-its/chapter1thecouncil?fn=altmain-nf.htm$f=templates$3.0
     session_details={
+        '2014': {
+            'type': 'primary',
+            'display_name': '2014 Legislative Session',
+            '_scraped_name': '2014',
+        },
         '2013': {
             'type': 'primary',
             'display_name': '2013 Legislative Session',

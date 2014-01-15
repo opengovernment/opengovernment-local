@@ -27,10 +27,15 @@ metadata = dict(
     # Staggered terms are a pain to model, but this approach has worked well for states.
     terms=[
         dict(name='2011-2012', start_year=2011, end_year=2012, sessions=['2012']),
-        dict(name='2013-2014', start_year=2013, end_year=2014, sessions=['2013']),
+        dict(name='2013-2014', start_year=2013, end_year=2014, sessions=['2013', '2014']),
     ],
     # The website organizes documents by year, so organize sessions by year.
     session_details={
+        '2014': {
+            'type': 'primary',
+            'display_name': '2014 Legislative Session',
+            '_scraped_name': '2014',
+        },
         '2013': {
             'type': 'primary',
             'display_name': '2013 Legislative Session',
